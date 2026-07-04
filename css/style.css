@@ -1,0 +1,232 @@
+/* --- RESET E ESTILOS GERAIS TEMÁTICOS --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212; /* Preto Asfalto */
+  color: #e0e0e0; /* Cinza claro para leitura confortável */
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+/* --- LINHAS GERAIS DE CONTEÚDO --- */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.conteudo-section {
+  background-color: #1a1a1a;
+  border: 1px solid #2d2d2d;
+  border-left: 5px solid #aa0000; /* Linha Vermelho Sangue Industrial */
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2, h3, h4 {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  border-bottom: 1px solid #aa0000;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #aa0000;
+  margin-top: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.destaque {
+  font-size: 1.1rem;
+  color: #ffffff;
+  border-bottom: 1px dashed #333;
+  padding-bottom: 15px;
+}
+
+/* --- NAV E HEADER --- */
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(18, 18, 18, 1)), url('../images/banner-bg.jpg') no-repeat center/cover;
+  text-align: center;
+  padding: 60px 20px 30px 20px;
+  border-bottom: 3px solid #aa0000;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #aa0000;
+  text-shadow: 3px 3px 0px #000;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+nav {
+  margin-top: 30px;
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 4px;
+  display: inline-block;
+  max-width: 1000px;
+  border: 1px solid #333;
+}
+
+nav h2 {
+  font-size: 1.1rem;
+  border: none;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #aa0000;
+  border-color: #aa0000;
+  background-color: #121212;
+}
+
+/* --- GRID DA DISCOGRAFIA --- */
+.discografia-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.album-item {
+  background-color: #121212;
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 4px;
+  text-align: left;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.album-item:hover {
+  transform: translateY(-5px);
+  border-color: #aa0000;
+}
+
+/* NOVA CLASSE ADICIONADA PARA AS CAPAS */
+.album-cover {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-bottom: 12px;
+  border: 1px solid #222;
+}
+
+.album-item h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #fff;
+  border-bottom: 1px solid #aa0000;
+  padding-bottom: 5px;
+}
+
+.album-item p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/* --- LISTA DE PRÊMIOS --- */
+.premios-lista {
+  list-style-position: inside;
+  margin-left: 10px;
+}
+
+.premios-lista li {
+  margin-bottom: 15px;
+  padding-left: 5px;
+  border-left: 2px solid #333;
+}
+
+.premios-lista li:hover {
+  border-left-color: #aa0000;
+}
+
+/* --- GALERIA DE FOTOS --- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 4px;
+  border: 2px solid #2d2d2d;
+  background-color: #121212;
+  transition: border-color 0.3s ease;
+  aspect-ratio: 1 / 1; /* Força os cards a ficarem quadradinhos padrão */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recorta a imagem sem distorcer para caber perfeitamente */
+  filter: grayscale(80%); /* Efeito sombrio em P&B por padrão */
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.gallery-item:hover {
+  border-color: #aa0000;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08); /* Efeito de zoom suave ao passar o mouse */
+  filter: grayscale(0%); /* A foto ganha cor total no hover */
+}
+
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #0b0b0b;
+  color: #555;
+  font-size: 0.85rem;
+  border-top: 1px solid #1a1a1a;
+  margin-top: 50px;
+}
